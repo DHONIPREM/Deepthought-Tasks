@@ -1,0 +1,166 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #1E90FF;
+    color: white;
+    padding: 10px 20px;
+}
+
+header h1 {
+    margin: 0;
+}
+
+.submit-task {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+aside.journey-board {
+    background-color: #333;
+    color: white;
+    width: 250px;
+    overflow-y: auto; /* Enable vertical scrolling */
+    height: calc(100vh - 50px); /* Adjust height to fit within the viewport */
+    position: fixed;
+    left: -250px; /* Hide the sidebar off-screen initially */
+    top: 50px;
+    transition: left 0.3s ease;
+}
+
+aside.journey-board .journey-board-content {
+    padding: 20px;
+}
+
+aside.journey-board h2 {
+    margin-top: 0;
+}
+
+aside.journey-board nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+aside.journey-board nav ul ul {
+    padding-left: 20px;
+}
+
+aside.journey-board.expanded {
+    left: 0; /* Show the sidebar */
+}
+
+.toggle-journey-board {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 1000; /* Ensure the toggle button is above other content */
+}
+
+main {
+    display: flex;
+    flex: 1;
+    padding-left: 20px;
+    transition: padding-left 0.3s ease;
+}
+
+main.expanded {
+    padding-left: 270px; /* Adjust padding to account for the sidebar width */
+}
+
+.intro {
+    padding: 20px;
+    flex: 1;
+}
+
+.content {
+    display: flex;
+    flex: 2;
+    flex-direction: column;
+    padding: 20px;
+    gap: 20px;
+}
+
+.video-section,
+.threadbuild-section,
+.structure-section,
+.method-section {
+    background-color: #f1f1f1;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.video-section h3,
+.threadbuild-section h3,
+.structure-section h3,
+.method-section h3 {
+    margin-top: 0;
+}
+
+iframe {
+    width: 100%;
+    height: 315px;
+}
+
+.thread {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.thread-controls {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.thread textarea {
+    width: 100%;
+    resize: none;
+}
+
+.thread button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.sidebar-buttons {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.sidebar-buttons button {
+    background-color: #1E90FF;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+}
