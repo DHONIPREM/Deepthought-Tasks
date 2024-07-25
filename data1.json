@@ -1,0 +1,22 @@
+{
+    "project": {
+        "tasks": [
+            {
+                "taskID": "taskA",
+                "taskName": "Task A",
+                "assets": [
+                    {"assetID": "assetA1", "assetName": "Asset A1"},
+                    {"assetID": "assetA2", "assetName": "Asset A2"}
+                ]
+            },
+            {
+                "taskID": "taskB",
+                "taskName": "Task B",
+                "assets": [
+                    {"assetID": "assetB1", "assetName": "Asset B1"},
+                    {"assetID": "assetB2", "assetName": "Asset B2"}
+                ]
+            }
+        ]
+    }
+}

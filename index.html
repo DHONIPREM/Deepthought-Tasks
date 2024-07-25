@@ -9,7 +9,7 @@
 <body>
     <div class="container">
         <header>
-            <h1>Deep Thought</h1>
+            <h1>Project Management Dashboard</h1>
             <button class="submit-task">Submit Task</button>
         </header>
         <aside class="journey-board collapsed" id="journeyBoard">
@@ -34,45 +34,11 @@
                 <h2>Explore the world of management</h2>
                 <p>Do you want to play an important role in leading a project through initiation, planning, execution, monitoring, controlling and completion. How? Do you want to explore the depths of your life?</p>
             </section>
-            <section class="content">
-                <div class="video-section">
-                    <h3>Technical Project Management</h3>
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/es4x5R-rV9s?si=3uoGu1zmm_UBvL28" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                </div>
-                <div class="threadbuild-section">
-                    <h3>Threadbuild</h3>
-                    <p>Description: Watch the video and thread build, and jot out key threads while watching that video.</p>
-                    <div class="thread">
-                        <h4>Thread A</h4>
-                        <textarea placeholder="Enter Text Here" rows="3"></textarea>
-                        <textarea placeholder="Enter Text Here" rows="3"></textarea>
-                        <div class="thread-controls">
-                            <button>Summary for Thread A</button>
-                            <button>+ Sub thread</button>
-                        </div>
-                    </div>
-                </div>
-                <div class="other-sections">
-                    <div class="structure-section">
-                        <h3>Structure You Pointers</h3>
-                        <p>Description: Write a 400-500 word article, from your thread. Publish your understanding, and showcase your learning to the entire world.</p>
-                        <input type="text" placeholder="Title">
-                        <textarea placeholder="Content" rows="5"></textarea>
-                    </div>
-                    <div class="method-section">
-                        <h3>4SA Method</h3>
-                        <p>Description: To explore more read more</p>
-                        <div class="method-content">
-                            <h4>Introduction</h4>
-                            <p>The 4SA Method, How to bring a idea into process?</p>
-                            <h4>Thread A</h4>
-                            <p>How are you going to develop your strategy? Which method are you going to use to develop a strategy? What if the project is lengthy?</p>
-                            <h4>Example 1</h4>
-                            <p>You have a concept; how will you put it into process?</p>
-                        </div>
-                    </div>
-                </div>
+            <section class="project-selector">
+                <button onclick="loadProjectData('data/project1.json')">Project 1</button>
+                <button onclick="loadProjectData('data/project2.json')">Project 2</button>
             </section>
+            <section class="content" id="taskContainer"></section>
         </main>
     </div>
     <div class="sidebar-buttons">
@@ -80,6 +46,6 @@
         <button>📊</button>
         <button>📅</button>
     </div>
-    <script src="script.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>
